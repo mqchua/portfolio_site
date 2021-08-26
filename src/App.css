@@ -40,3 +40,9 @@
 .pad-left {
     margin-left: 50px;
 }
+
+h5, p{
+  /*outline: 2px dashed blue;*/
+  margin: 0px;
+  padding: 0px;
+}
