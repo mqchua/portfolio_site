@@ -11,6 +11,7 @@ import { Grid, Container, Paper, Slide } from '@material-ui/core';
 import Carousel from 'react-material-ui-carousel'
 
 import profilePic from'./images/pp.jpg';
+import code from'./images/code.png';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -56,7 +57,7 @@ const useStyles = makeStyles(theme => ({
   },
 
   leftWrapper: {
-    flex: "0 0 30%",
+    flex: "0 0 20%",
     textAlign: "left",
     alignSelf: "flex-end", // align bottom
   },
@@ -65,6 +66,15 @@ const useStyles = makeStyles(theme => ({
     flex: "1",
     textAlign: "left",
   },
+
+  introText: {
+    maxWidth: "500px",
+    textAlign: "left",
+  },
+
+  marginTop: {
+    marginTop: "26px",
+  }
 
 
 }));
@@ -94,8 +104,10 @@ function App() {
     <div className= {classes.bgColor1}>
       <div className={classes.divCenter}>
         <div className={classes.container} >
-          <h1 className={classes.alignLeft} >Hi, It's John,</h1>
-          <h5 className={classes.alignLeft} >Software Engineer from Singapore</h5>
+          <p className={classes.alignLeft} ><small>Hi, my name is</small></p>
+          <h1 className={classes.alignLeft} >John Doe.</h1>
+          <p className={classes.introText} ><small>I'm an undergraduate specializing in Software Engineering. My passion lies
+          in designing seamless web pages, and I enjoy collaborating with people.</small></p>
         </div>
       </div>
     </div>
@@ -131,26 +143,18 @@ function App() {
           <br></br>
 
         <Grid container spacing={3}>
-          <Grid item xs={4} className={classes.alignLeft} >
-              <img className={classes.profilePic} src={profilePic} alt="profilePic" />
-          </Grid>
-          <Grid item xs={8}>
-{/*
-              <h5 className={classes.alignLeft} >Frontend</h5>
-              <h5 className={classes.alignLeft} >Tools</h5>
-              <h5 className={classes.alignLeft} >Backend</h5>
-              <h5 className={classes.alignLeft} >Tools</h5>*/}
+{/*          <Grid item xs={4} className={classes.alignLeft} >
+              <img className={classes.code} src={code} alt="profilePic" />
+          </Grid>*/}
+          <Grid item xs={12}>
 
+
+              <div className={classes.marginTop}></div>
 
               <div className={classes.wrapper}>
-                  <h5 className={classes.leftWrapper}>Profile</h5>
-                  <p className={classes.RightWrapper}><small>Undergraduate, Software Engineer</small></p>
+                  <h5 className={classes.leftWrapper}>Languages</h5>
+                  <p className={classes.RightWrapper}><small>Java, Javasript, Python, PHP, Ruby, R</small></p>
               </div>
-
-              <br></br>
-              <br></br>
-              <br></br>
-              <br></br>
 
 
               <div className={classes.wrapper}>
@@ -160,7 +164,7 @@ function App() {
 
               <div className={classes.wrapper}>
                   <h5 className={classes.leftWrapper}>Backend</h5>
-                  <p className={classes.RightWrapper}><small>Ruby, PHP, Django, Flask, MySQL</small></p>
+                  <p className={classes.RightWrapper}><small>Django, Flask, MySQL, Postgres</small></p>
               </div>
 
               <div className={classes.wrapper}>
@@ -168,21 +172,8 @@ function App() {
                   <p className={classes.RightWrapper}><small>Git, Jira, Asana</small></p>
               </div>
 
-
-
-
           </Grid>
 
-          {/*<Grid item xs={6}>*/}
-
-              {/*<p className={classes.dualcolTest}> This div has a green and red background </p>*/}
-{/*              <p className={classes.alignLeft}><small>Ruby, PHP, Django</small></p>
-              <p className={classes.alignLeft}><small>ReactJS, VueJS</small></p>
-
-              <p className={classes.alignLeft}><small>Ruby, PHP, Django</small></p>
-              <p className={classes.alignLeft}><small>Ruby, PHP, Django</small></p>
-*/}
-          {/*</Grid>*/}
         </Grid>
 
         </div>
@@ -198,7 +189,7 @@ function App() {
       <div className={classes.divCenter}>
         <div className={classes.container} >
 
-          <h4 className={classes.alignLeft} >Portfolio</h4>
+          <h4 className={classes.alignLeft} >Projects</h4>
           <br></br>
 
           <p className={classes.alignLeft}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget nunc in sapien ultrices interdum. Mauris sed lectus sem. Donec ligula libero, tempor vestibulum leo at, accumsan semper risus. Sed condimentum mauris eros, in bibendum purus gravida et. Vestibulum imperdiet sollicitudin odio ac ultricies. Fusce porta quis quam quis sollicitudin.</p>
@@ -220,17 +211,21 @@ function App() {
           <br></br>
 
         <Grid container spacing={3}>
-          <Grid item xs={4} className={classes.alignLeft} >
+          <Grid item xs={3} className={classes.alignLeft} >
+              <p className={classes.alignLeft}><small>LinkedIn</small></p>
+              <p className={classes.alignLeft}><small>Twitter</small></p>
+              <p className={classes.alignLeft}><small>Instagram</small></p>
+              <p className={classes.alignLeft}><small>Github</small></p>
+          </Grid>
 
+          <Grid item xs={3} className={classes.alignLeft}>
 
+            <p className={classes.alignLeft}><small>Email:</small></p>
+            <p className={classes.alignLeft}><small>johndoe@gmail.com</small></p>
 
           </Grid>
 
-          <Grid item xs={4} className={classes.alignLeft}>
-
-          </Grid>
-
-          <Grid item xs={4} className={classes.alignLeft}>
+          <Grid item xs={6} className={classes.alignLeft}>
 
           </Grid>
 
