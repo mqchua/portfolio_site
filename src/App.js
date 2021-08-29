@@ -6,12 +6,13 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import Button from '@material-ui/core/Button';
+import Hidden from '@material-ui/core/Hidden';
 import MenuIcon from '@material-ui/icons/Menu';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import CodeIcon from '@material-ui/icons/Code';
-import LocalFloristIcon from '@material-ui/icons/LocalFlorist';
+import BrushIcon from '@material-ui/icons/Brush';
 
 import { Grid, Container, Paper, Slide, Divider} from '@material-ui/core';
 import Carousel from 'react-material-ui-carousel';
@@ -53,37 +54,19 @@ const useStyles = makeStyles(theme => ({
     boxShadow: "none",
     color: "#000000",
   },
-  wrapper: {
-    display: "flex",
-    marginBottom: "20px",
-  },
-
-  leftWrapper: {
-    flex: "0 0 20%",
-    textAlign: "left",
-    alignSelf: "flex-end", // align bottom
-  },
-
-  rightWrapper: {
-    flex: "1",
-    textAlign: "left",
-  },
-
   introText: {
     maxWidth: "500px",
     textAlign: "left",
   },
-
-  marginTop: {
-    marginTop: "26px",
-  },
-
   socials: {
     display:"flex",
     justifyContent:"space-between",
     alignSelf: "center",
     width: "100px",
     // outline: "2px dashed blue",
+  },
+  largeIcon: {
+    transform: "scale(2.0)",
   },
 
 }));
@@ -126,7 +109,7 @@ function App() {
       <div className={classes.divCenter}>
         <div className={classes.container} >
 
-          <h4 className={classes.alignLeft} >About me</h4>
+          <h2 className={classes.alignLeft} >About me</h2>
 
 
           <Grid container spacing={3}>
@@ -170,20 +153,22 @@ function App() {
       <div className={classes.divCenter}>
         <div className={classes.container}>
 
-          <h4 className={classes.alignLeft}>Skills</h4>
+          <h2 className={classes.alignLeft}>Skills</h2>
 
           <br></br>
 
-          <Grid container spacing={10} justifyContent="center">
+          <Grid container spacing={6} justifyContent="center">
             <Grid item xs={12} md={4}>
 
 
-                <CodeIcon/>
+                <CodeIcon className={classes.largeIcon} />
                 <br></br>
-                <p><h5>Full-stack Developer</h5></p>
+                <br></br>
+                <p><h4>Full-stack Developer</h4></p>
                 <br></br>
                 <p><small>I like to code things from scratch, and enjoy bringing ideas to life in the browser.</small></p>
 
+                <br></br>
                 <br></br>
                 <br></br>
                 <br></br>
@@ -192,18 +177,29 @@ function App() {
                 <br></br>
                 <p><small>ReactJS</small></p>
                 <p><small>WordPress</small></p>
-                <p><small>VueJS</small></p>
-                <p><small>AngularJS</small></p>
                 <p><small>Django</small></p>
+                <p><small>Git</small></p>
 
             </Grid>
+
+
+            <Grid item xs={2} md={1}>
+               <Divider orientation="vertical"/>
+            </Grid>
+
+            <Hidden mdUp>
+              <Grid item xs={12}>
+                <Divider orientation="horizontal"/>
+              </Grid>
+            </Hidden>
 
             <Grid item xs={12} md={4}>
 
 
-                <LocalFloristIcon/>
+                <BrushIcon className={classes.largeIcon} />
                 <br></br>
-                <p><h5>Designer</h5></p>
+                <br></br>
+                <p><h4>Designer</h4></p>
                 <br></br>
                 <p><small>I value simple content structure, clean design patterns, and thoughtful interactions.</small></p>
 
@@ -231,7 +227,7 @@ function App() {
       <div className={classes.divCenter}>
         <div className={classes.container} >
 
-          <h4 className={classes.alignLeft}>Projects</h4>
+          <h2 className={classes.alignLeft}>My Projects</h2>
 
 
           <br></br>
@@ -309,14 +305,7 @@ function App() {
           </CardActionArea>
 
           </Grid>
-
-
-
         </Grid>
-
-
-
-
 
         </div>
       </div>
