@@ -7,7 +7,13 @@ import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import Button from '@material-ui/core/Button';
 import MenuIcon from '@material-ui/icons/Menu';
-import { Grid, Container, Paper, Slide } from '@material-ui/core';
+import TwitterIcon from '@material-ui/icons/Twitter';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import InstagramIcon from '@material-ui/icons/Instagram';
+import CodeIcon from '@material-ui/icons/Code';
+import LocalFloristIcon from '@material-ui/icons/LocalFlorist';
+
+import { Grid, Container, Paper, Slide, Divider} from '@material-ui/core';
 import Carousel from 'react-material-ui-carousel';
 
 import Card from '@material-ui/core/Card';
@@ -72,11 +78,13 @@ const useStyles = makeStyles(theme => ({
     marginTop: "26px",
   },
 
-  profilePic: {
-      // marginLeft: "60px",
-      // outline: "2px dashed blue",
-  }
-
+  socials: {
+    display:"flex",
+    justifyContent:"space-between",
+    alignSelf: "center",
+    width: "100px",
+    // outline: "2px dashed blue",
+  },
 
 }));
 
@@ -163,41 +171,55 @@ function App() {
         <div className={classes.container}>
 
           <h4 className={classes.alignLeft}>Skills</h4>
+
           <br></br>
 
-        <Grid container spacing={3}>
-{/*          <Grid item xs={4} className={classes.alignLeft} >
-              <img className={classes.code} src={code} alt="profilePic" />
-          </Grid>*/}
-          <Grid item xs={12}>
+          <Grid container spacing={10} justifyContent="center">
+            <Grid item xs={12} md={4}>
 
 
-              <div className={classes.marginTop}></div>
+                <CodeIcon/>
+                <br></br>
+                <p><h5>Full-stack Developer</h5></p>
+                <br></br>
+                <p><small>I like to code things from scratch, and enjoy bringing ideas to life in the browser.</small></p>
 
-              <div className={classes.wrapper}>
-                  <h5 className={classes.leftWrapper}>Languages</h5>
-                  <p className={classes.RightWrapper}><small>Java, Javasript, Python, PHP, Ruby, R</small></p>
-              </div>
+                <br></br>
+                <br></br>
+                <br></br>
+
+                <p><h5>Dev Tools:</h5></p>
+                <br></br>
+                <p><small>ReactJS</small></p>
+                <p><small>WordPress</small></p>
+                <p><small>VueJS</small></p>
+                <p><small>AngularJS</small></p>
+                <p><small>Django</small></p>
+
+            </Grid>
+
+            <Grid item xs={12} md={4}>
 
 
-              <div className={classes.wrapper}>
-                  <h5 className={classes.leftWrapper}>Frontend</h5>
-                  <p className={classes.RightWrapper}><small>ReactJS, VueJS, WordPress</small></p>
-              </div>
+                <LocalFloristIcon/>
+                <br></br>
+                <p><h5>Designer</h5></p>
+                <br></br>
+                <p><small>I value simple content structure, clean design patterns, and thoughtful interactions.</small></p>
 
-              <div className={classes.wrapper}>
-                  <h5 className={classes.leftWrapper}>Backend</h5>
-                  <p className={classes.RightWrapper}><small>Django, Flask, MySQL, Postgres</small></p>
-              </div>
+                <br></br>
+                <br></br>
+                <br></br>
 
-              <div className={classes.wrapper}>
-                  <h5 className={classes.leftWrapper}>Tools</h5>
-                  <p className={classes.RightWrapper}><small>Git, Jira, Asana</small></p>
-              </div>
+                <p><h5>Design Tools:</h5></p>
+                <br></br>
+                <p><small>Figma</small></p>
+                <p><small>Sketch</small></p>
+                <p><small>Canva</small></p>
+                <p><small>Photoshop</small></p>
 
+            </Grid>
           </Grid>
-
-        </Grid>
 
         </div>
       </div>
@@ -209,81 +231,82 @@ function App() {
       <div className={classes.divCenter}>
         <div className={classes.container} >
 
-          <h4 className={classes.alignLeft} >Projects</h4>
+          <h4 className={classes.alignLeft}>Projects</h4>
 
 
           <br></br>
           <br></br>
 
 
-          <Grid container spacing={3}>
+        <Grid container spacing={3}>
 
-                    <Grid item xs={12} md={4} className={classes.profilePic}>
+        <Grid item xs={12} md={4} className={classes.profilePic}>
 
-               <CardActionArea>
-          <CardMedia
-          component="img"
-          alt="Contemplative Reptile"
-          height="140"
-          image={profilePic}
-          title="Contemplative Reptile"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            Lizard
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-            across all continents except Antarctica
-          </Typography>
-        </CardContent>
-      </CardActionArea>
+        <CardActionArea>
+            <CardMedia
+            component="img"
+            alt="Contemplative Reptile"
+            height="140"
+            image={profilePic}
+            title="Contemplative Reptile"
+          />
+
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="h2">
+              Lizard
+            </Typography>
+            <Typography variant="body2" color="textSecondary" component="p">
+              Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
+              across all continents except Antarctica
+            </Typography>
+          </CardContent>
+        </CardActionArea>
 
           </Grid>
 
           <Grid item xs={12} md={4} className={classes.profilePic}>
 
           <CardActionArea>
-          <CardMedia
-          component="img"
-          alt="Contemplative Reptile"
-          height="140"
-          image={profilePic}
-          title="Contemplative Reptile"
-      />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            Lizard
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-            across all continents except Antarctica
-          </Typography>
-        </CardContent>
-      </CardActionArea>
+              <CardMedia
+              component="img"
+              alt="Contemplative Reptile"
+              height="140"
+              image={profilePic}
+              title="Contemplative Reptile"
+          />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="h2">
+                Lizard
+              </Typography>
+              <Typography variant="body2" color="textSecondary" component="p">
+                Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
+                across all continents except Antarctica
+              </Typography>
+            </CardContent>
+          </CardActionArea>
 
           </Grid>
 
-                    <Grid item xs={12} md={4} className={classes.profilePic}>
+       <Grid item xs={12} md={4} className={classes.profilePic}>
 
-               <CardActionArea>
-          <CardMedia
-          component="img"
-          alt="Contemplative Reptile"
-          height="140"
-          image={profilePic}
-          title="Contemplative Reptile"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            Lizard
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-            across all continents except Antarctica
-          </Typography>
-        </CardContent>
-      </CardActionArea>
+            <CardActionArea>
+              <CardMedia
+              component="img"
+              alt="Contemplative Reptile"
+              height="140"
+              image={profilePic}
+              title="Contemplative Reptile"
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="h2">
+                Lizard
+              </Typography>
+              <Typography variant="body2" color="textSecondary" component="p">
+                Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
+                across all continents except Antarctica
+              </Typography>
+            </CardContent>
+          </CardActionArea>
 
           </Grid>
 
@@ -304,41 +327,21 @@ function App() {
       <div className={classes.divCenter}>
         <div className={classes.container} >
 
-          <h4 className={classes.alignLeft}>Get in Touch</h4>
+          <h4>Get in Touch</h4>
+
           <br></br>
 
-        <Grid container spacing={3}>
-          <Grid item xs={3} className={classes.alignLeft} >
-              <p className={classes.alignLeft}><small>LinkedIn</small></p>
-              <p className={classes.alignLeft}><small>Twitter</small></p>
-              <p className={classes.alignLeft}><small>Instagram</small></p>
-              <p className={classes.alignLeft}><small>Github</small></p>
-          </Grid>
-
-          <Grid item xs={3} className={classes.alignLeft}>
-
-            <p className={classes.alignLeft}><small>Email:</small></p>
-            <p className={classes.alignLeft}><small>johndoe@gmail.com</small></p>
-
-          </Grid>
-
-          <Grid item xs={6} className={classes.alignLeft}>
-
-          </Grid>
-
-        </Grid>
+          <div className={classes.divCenter}>
+            <div className={classes.socials}>
+                <TwitterIcon></TwitterIcon>
+                <InstagramIcon></InstagramIcon>
+                <LinkedInIcon></LinkedInIcon>
+            </div>
+          </div>
 
         </div>
       </div>
     </div>
-
-
-
-
-
-
-
-
 
     </div>
   );
