@@ -8,7 +8,7 @@ import IconButton from '@material-ui/core/IconButton';
 import Button from '@material-ui/core/Button';
 import MenuIcon from '@material-ui/icons/Menu';
 import { Grid, Container, Paper, Slide } from '@material-ui/core';
-import Carousel from 'react-material-ui-carousel'
+import Carousel from 'react-material-ui-carousel';
 
 import profilePic from'./images/pp.jpg';
 import code from'./images/code.png';
@@ -41,16 +41,6 @@ const useStyles = makeStyles(theme => ({
     boxShadow: "none",
     color: "#000000",
   },
-  profilePic: {
-    width: "100%",
-    maxWidth: "220px",
-    maxHeight: "220px",
-  },
-  dualcolTest: {
-        marginBottom: "10px",
-        background: "linear-gradient(to right, green 0%, green 80%, red 80%, red 100%)"
-  },
-
   wrapper: {
     display: "flex",
     marginBottom: "20px",
@@ -74,6 +64,11 @@ const useStyles = makeStyles(theme => ({
 
   marginTop: {
     marginTop: "26px",
+  },
+
+  profilePic: {
+      // marginLeft: "60px",
+      // outline: "2px dashed blue",
   }
 
 
@@ -106,8 +101,8 @@ function App() {
         <div className={classes.container} >
           <p className={classes.alignLeft} ><small>Hi, my name is</small></p>
           <h1 className={classes.alignLeft} >John Doe.</h1>
-          <p className={classes.introText} ><small>I'm an undergraduate specializing in Software Engineering. My passion lies
-          in designing seamless web pages, and I enjoy collaborating with people.</small></p>
+          <p className={classes.introText} ><small>I'm an undergraduate specializing in Software Engineering. I enjoy web
+          design and collaborating with people.</small></p>
         </div>
       </div>
     </div>
@@ -118,17 +113,38 @@ function App() {
         <div className={classes.container} >
 
           <h4 className={classes.alignLeft} >About me</h4>
-          <br></br>
 
-          <p className={classes.alignLeft}><small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget nunc in sapien ultrices interdum.
-          Mauris sed lectus sem. Donec ligula libero,tempor vestibulum leo at, accumsan semper risus. Sed condimentum mauris eros, in bibendum purus
-          gravida et. Vestibulum imperdiet sollicitudin odio ac ultricies. Fusce porta quis quam quis sollicitudin.</small></p>
 
-          <br></br>
+          <Grid container spacing={3}>
+          <Grid item xs={12} md={6} className={classes.alignLeft} >
 
-          <p className={classes.alignLeft}><small>Ut lacinia id lorem at cursus. Morbi efficitur arcu in tortor aliquam, ac porta eros hendrerit.
-          Sed felis enim, gravida et urna vel, suscipit posuere mi. Nulla facilisis risus et sem lacinia, in tincidunt nunc volutpat. Vivamus
-          sit amet mattis elit, in interdum tortor. Quisque nulla enim, aliquet eget bibendum id, tincidunt.</small></p>
+
+            <br></br>
+            <br></br>
+            <p className={classes.alignLeft}><small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget nunc in sapien ultrices interdum.
+            Mauris sed lectus sem. Donec ligula libero,tempor vestibulum leo at, accumsan semper risus. Sed condimentum mauris eros, in bibendum purus
+            gravida et. Vestibulum imperdiet sollicitudin odio ac ultricies. Fusce porta quis quam quis sollicitudin.</small></p>
+
+            <br></br>
+            <p className={classes.alignLeft}><small>Ut lacinia id lorem at cursus. Morbi efficitur arcu in tortor aliquam, ac porta eros hendrerit.
+            Sed felis enim, gravida et urna vel, suscipit posuere mi. Nulla facilisis risus et sem lacinia, in tincidunt nunc volutpat. Vivamus
+            sit amet mattis elit, in interdum tortor. Quisque nulla enim, aliquet eget bibendum id, tincidunt.</small></p>
+
+          </Grid>
+
+          <Grid item xs={12} md={6} className={classes.profilePic}>
+
+              <div className="profilePic">
+                <img className="aboutImg" src={profilePic} alt="Img" />
+              </div>
+
+          </Grid>
+
+
+
+        </Grid>
+
+
 
         </div>
       </div>
@@ -182,21 +198,13 @@ function App() {
 
 
 
-
-
-
     <div className= {classes.bgColor2}>
       <div className={classes.divCenter}>
         <div className={classes.container} >
 
           <h4 className={classes.alignLeft} >Projects</h4>
-          <br></br>
 
-          <p className={classes.alignLeft}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget nunc in sapien ultrices interdum. Mauris sed lectus sem. Donec ligula libero, tempor vestibulum leo at, accumsan semper risus. Sed condimentum mauris eros, in bibendum purus gravida et. Vestibulum imperdiet sollicitudin odio ac ultricies. Fusce porta quis quam quis sollicitudin.</p>
 
-          <br></br>
-
-          <p className={classes.alignLeft}>Ut lacinia id lorem at cursus. Morbi efficitur arcu in tortor aliquam, ac porta eros hendrerit. Sed felis enim, gravida et urna vel, suscipit posuere mi. Nulla facilisis risus et sem lacinia, in tincidunt nunc volutpat. Vivamus sit amet mattis elit, in interdum tortor. Quisque nulla enim, aliquet eget bibendum id, tincidunt.</p>
 
         </div>
       </div>
