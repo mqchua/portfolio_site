@@ -13,13 +13,6 @@ const useStyles = makeStyles(theme => ({
     // outline: "2px dashed blue",
     padding: "3rem",
   },
-  headerSection: {
-    maxWidth: "900px",
-    width: "100%", //prevent child width from shrinking
-    // outline: "2px dashed blue",
-    padding: "3rem",
-    paddingBottom: "150px",
-  },
   divCenter: {
     display:"flex",
     justifyContent: "center"
@@ -37,17 +30,6 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: "#FFFFFF",
     boxShadow: "none",
     color: "#000000",
-  },
-  introText: {
-    maxWidth: "360px",
-    textAlign:"center",
-  },
-  socials: {
-    display:"flex",
-    justifyContent:"space-between",
-    alignSelf: "center",
-    width: "100px",
-    // outline: "2px dashed blue",
   },
   largeIcon: {
     transform: "scale(2.0)",
