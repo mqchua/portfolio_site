@@ -36,6 +36,13 @@ const useStyles = makeStyles(theme => ({
     // outline: "2px dashed blue",
     padding: "3rem",
   },
+  headerSection: {
+    maxWidth: "900px",
+    width: "100%", //prevent child width from shrinking
+    // outline: "2px dashed blue",
+    padding: "3rem",
+    paddingBottom: "150px",
+  },
   divCenter: {
     display:"flex",
     justifyContent: "center"
@@ -55,8 +62,8 @@ const useStyles = makeStyles(theme => ({
     color: "#000000",
   },
   introText: {
-    maxWidth: "500px",
-    textAlign: "left",
+    maxWidth: "360px",
+    textAlign:"center",
   },
   socials: {
     display:"flex",
@@ -68,8 +75,23 @@ const useStyles = makeStyles(theme => ({
   largeIcon: {
     transform: "scale(2.0)",
   },
+  outline: {
+    // outline: "2px dashed blue",
+    // maxWidth: "500px"
+  },
+
+  myCustomButton: {
+    // backgroundColor: "#EFD26E",
+    // position: "relative",
+    transition: "0.3s",
+    "&:hover": {
+      color: "#FFAA98",
+    }
+  }
 
 }));
+
+
 
 function App() {
 
@@ -82,8 +104,7 @@ function App() {
     {/*<br></br>*/}
       <div className={classes.divCenter}>
         <Toolbar className={classes.container}>
-          <Typography>Portfolio</Typography>
-            <Grid container justify="flex-end">
+            <Grid container justify="center" className={classes.outline}>
               <Button>Home</Button>
               <Button>About</Button>
               <Button>Skills</Button>
@@ -95,11 +116,13 @@ function App() {
 
     <div className= {classes.bgColor1}>
       <div className={classes.divCenter}>
-        <div className={classes.container} >
-          <p className={classes.alignLeft} ><small>Hi, my name is</small></p>
-          <h1 className={classes.alignLeft} >John Doe.</h1>
-          <p className={classes.introText} ><small>I'm an undergraduate specializing in Software Engineering. I enjoy web
-          design and collaborating with people.</small></p>
+        <div className={classes.headerSection} >
+          <p ><small>Hi, my name is</small></p>
+          <h1 >John Doe.</h1>
+          <div className={classes.divCenter}>
+            <p className={classes.introText} ><small>I'm an undergraduate specializing in Software Engineering. I enjoy web
+            design and collaborating with people.</small></p>
+          </div>
         </div>
       </div>
     </div>
@@ -181,7 +204,6 @@ function App() {
                 <p><small>Git</small></p>
 
             </Grid>
-
 
             <Grid item xs={2} md={1}>
                <Divider orientation="vertical"/>
@@ -322,9 +344,9 @@ function App() {
 
           <div className={classes.divCenter}>
             <div className={classes.socials}>
-                <TwitterIcon></TwitterIcon>
-                <InstagramIcon></InstagramIcon>
-                <LinkedInIcon></LinkedInIcon>
+                <TwitterIcon className={classes.myCustomButton} onClick={event =>  window.open('https://twitter.com')} />
+                <InstagramIcon className={classes.myCustomButton} onClick={event =>  window.open('https://instagram.com')} />
+                <LinkedInIcon className={classes.myCustomButton} onClick={event =>  window.open('https://linkedin.com')} />
             </div>
           </div>
 
