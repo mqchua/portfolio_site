@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import '../App.css';
+
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -8,6 +8,7 @@ import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import Button from '@material-ui/core/Button';
 import Hidden from '@material-ui/core/Hidden';
+
 import MenuIcon from '@material-ui/icons/Menu';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
@@ -25,7 +26,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 
 import profilePic from'../images/pp.jpg';
-import code from'../images/code.png';
+import '../App.css';
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -78,6 +79,10 @@ const useStyles = makeStyles(theme => ({
     "&:hover": {
       color: "#FFAA98",
     }
+  },
+  introText: {
+    maxWidth: "360px",
+    textAlign:"center",
   },
 
 }));
@@ -140,8 +145,6 @@ export default function HomePage() {
         </div>
       </div>
     </div>
-
-
 
     <div className= {classes.bgColor1}>
         <div className={classes.divCenter}>

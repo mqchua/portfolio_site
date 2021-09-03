@@ -18,81 +18,27 @@ import BrushIcon from '@material-ui/icons/Brush';
 import { Grid, Container, Paper, Slide, Divider} from '@material-ui/core';
 import Carousel from 'react-material-ui-carousel';
 
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-
-import profilePic from'./images/pp.jpg';
-import code from'./images/code.png';
-
-import IntroSection from './components/IntroSection';
-import AboutSection from './components/AboutSection';
-import SkillsSection from './components/SkillsSection';
-import ProjectsSection from './components/ProjectsSection';
-import Footer from './components/Footer';
-
-
 import HomePage from './components/HomePage';
 import AboutPage from './components/AboutPage';
 import ProjectsPage from './components/ProjectsPage';
+import Footer from './components/Footer';
 
 const useStyles = makeStyles(theme => ({
   container: {
     maxWidth: "900px",
-    width: "100%", //prevent child width from shrinking
-    // outline: "2px dashed blue",
+    width: "100%",
     padding: "3rem",
-  },
-  headerSection: {
-    maxWidth: "900px",
-    width: "100%", //prevent child width from shrinking
-    // outline: "2px dashed blue",
-    padding: "3rem",
-    paddingBottom: "150px",
   },
   divCenter: {
     display:"flex",
     justifyContent: "center"
-  },
-  alignLeft: {
-    // outline: "2px dashed blue",
-    textAlign: "left"
   },
   bgColor1: {
     backgroundColor: "#FFFAF2",
     boxShadow: "none",
     color: "#000000",
   },
-  bgColor2: {
-    backgroundColor: "#FFFFFF",
-    boxShadow: "none",
-    color: "#000000",
-  },
-  socials: {
-    display:"flex",
-    justifyContent:"space-between",
-    alignSelf: "center",
-    width: "100px",
-    // outline: "2px dashed blue",
-  },
-  largeIcon: {
-    transform: "scale(2.0)",
-  },
-  outline: {
-    // outline: "2px dashed blue",
-    // maxWidth: "500px"
-  },
-  myCustomButton: {
-    transition: "0.3s",
-    "&:hover": {
-      color: "#FFAA98",
-    }
-  },
-
 }));
-
 
 
 function App() {
@@ -103,6 +49,7 @@ function App() {
     <div className="App">
 
     <Router position="static">
+
       <div className= {classes.bgColor1}>
         <div className={classes.divCenter}>
           <Toolbar className={classes.container}>
@@ -116,14 +63,11 @@ function App() {
       </div>
 
       <Switch>
-
-          <Route exact path='/'>
-
-            <HomePage/>
-          </Route>
-          <Route path='/about' component={AboutPage} />
-          <Route path='/projects' component={ProjectsPage} />
+        <Route exact path='/' component={HomePage} />
+        <Route path='/about' component={AboutPage} />
+        <Route path='/projects' component={ProjectsPage} />
       </Switch>
+
     </Router>
 
     <Footer/>
