@@ -25,6 +25,7 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: "#FFFAF2",
     boxShadow: "none",
     color: "#000000",
+    // outline: "2px dashed blue",
   },
   bgColor2: {
     backgroundColor: "#FFFFFF",

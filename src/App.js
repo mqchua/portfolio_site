@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import './App.css';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -30,6 +31,10 @@ import IntroSection from './components/IntroSection';
 import AboutSection from './components/AboutSection';
 import SkillsSection from './components/SkillsSection';
 import ProjectsSection from './components/ProjectsSection';
+
+
+import AboutPage from './components/AboutPage';
+import ProjectsPage from './components/ProjectsPage';
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -82,7 +87,7 @@ const useStyles = makeStyles(theme => ({
     "&:hover": {
       color: "#FFAA98",
     }
-  }
+  },
 
 }));
 
@@ -95,24 +100,31 @@ function App() {
   return (
     <div className="App">
 
-    <AppBar position="static" className={classes.bgColor1}>
-    {/*<br></br>*/}
-      <div className={classes.divCenter}>
-        <Toolbar className={classes.container}>
-            <Grid container justify="center" className={classes.outline}>
-              <Button>Home</Button>
-              <Button>About</Button>
-              <Button>Skills</Button>
-              <Button>Contact</Button>
-            </Grid>
-        </Toolbar>
+    <Router position="static">
+      <div className= {classes.bgColor1}>
+        <div className={classes.divCenter}>
+          <Toolbar className={classes.container}>
+              <Grid container justify="center" className={classes.outline}>
+                <Button component={Link} to="/">Home</Button>
+                <Button component={Link} to="/about">About</Button>
+                <Button component={Link} to="/projects">Projects</Button>
+              </Grid>
+          </Toolbar>
+        </div>
       </div>
-    </AppBar>
+      <Switch>
+          <Route exact path='/'>
+            <IntroSection/>
+            <AboutSection/>
+            <SkillsSection/>
+            <ProjectsSection/>
+          </Route>
 
-    <IntroSection/>
-    <AboutSection/>
-    <SkillsSection/>
-    <ProjectsSection/>
+          <Route path='/about' component={AboutPage} />
+          <Route path='/projects' component={ProjectsPage} />
+      </Switch>
+    </Router>
+
 
     <div className= {classes.bgColor1}>
       <div className={classes.divCenter}>
