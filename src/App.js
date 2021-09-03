@@ -34,6 +34,7 @@ import ProjectsSection from './components/ProjectsSection';
 import Footer from './components/Footer';
 
 
+import HomePage from './components/HomePage';
 import AboutPage from './components/AboutPage';
 import ProjectsPage from './components/ProjectsPage';
 
@@ -117,10 +118,8 @@ function App() {
       <Switch>
 
           <Route exact path='/'>
-            <IntroSection/>
-            <AboutSection/>
-            <SkillsSection/>
-            <ProjectsSection/>
+
+            <HomePage/>
           </Route>
           <Route path='/about' component={AboutPage} />
           <Route path='/projects' component={ProjectsPage} />
