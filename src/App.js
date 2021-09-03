@@ -31,6 +31,7 @@ import IntroSection from './components/IntroSection';
 import AboutSection from './components/AboutSection';
 import SkillsSection from './components/SkillsSection';
 import ProjectsSection from './components/ProjectsSection';
+import Footer from './components/Footer';
 
 
 import AboutPage from './components/AboutPage';
@@ -112,39 +113,21 @@ function App() {
           </Toolbar>
         </div>
       </div>
+
       <Switch>
+
           <Route exact path='/'>
             <IntroSection/>
             <AboutSection/>
             <SkillsSection/>
             <ProjectsSection/>
           </Route>
-
           <Route path='/about' component={AboutPage} />
           <Route path='/projects' component={ProjectsPage} />
       </Switch>
     </Router>
 
-
-    <div className= {classes.bgColor1}>
-      <div className={classes.divCenter}>
-        <div className={classes.container} >
-
-          <h4>Get in Touch</h4>
-
-          <br></br>
-
-          <div className={classes.divCenter}>
-            <div className={classes.socials}>
-                <TwitterIcon className={classes.myCustomButton} onClick={event =>  window.open('https://twitter.com')} />
-                <InstagramIcon className={classes.myCustomButton} onClick={event =>  window.open('https://instagram.com')} />
-                <LinkedInIcon className={classes.myCustomButton} onClick={event =>  window.open('https://linkedin.com')} />
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
+    <Footer/>
 
     </div>
   );
