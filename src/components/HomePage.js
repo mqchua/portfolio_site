@@ -119,9 +119,9 @@ export default function HomePage() {
 
               <br></br>
               <br></br>
-              <p className={classes.alignLeft}><small>My name is John Doe, Penultimate student from National University of Singapore. I am open to new opportunities to broaden
-              my network and gain relevant skills in the industry. I am currently freelancing, making websites for companies to expand their organizaitonal outreach. As an avid sportsmen,
-              I spend my free time preparing for marathons. I believe that consistency is the key to success.</small></p>
+              <p className={classes.alignLeft}><small>My name is John Doe, penultimate student from the National University of Singapore. I am open to new opportunities to broaden
+              my network and gain relevant skills in the industry. I am currently freelancing, making websites for companies to expand their outreach.
+               I believe that consistency is the key to success.</small></p>
 
               <br></br>
               <p className={classes.alignLeft}><small>I love meeting new people and hearing new perspectives. Feel free to reach out if you want to talk to me about tech,

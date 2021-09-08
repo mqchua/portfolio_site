@@ -33,39 +33,37 @@ const useStyles = makeStyles(theme => ({
 }));
 
 
-function App() {
+export default function App() {
 
   const classes = useStyles();
 
   return (
     <div className="App">
 
-    <Router position="static">
+      <Router position="static">
 
-      <div className= {classes.bgColor1}>
-        <div className={classes.divCenter}>
-          <Toolbar className={classes.container}>
-              <Grid container justify="center" className={classes.outline}>
-                <Button component={Link} to="/">Home</Button>
-                <Button component={Link} to="/about">About</Button>
-                <Button component={Link} to="/projects">Projects</Button>
-              </Grid>
-          </Toolbar>
+        <div className= {classes.bgColor1}>
+          <div className={classes.divCenter}>
+            <Toolbar className={classes.container}>
+                <Grid container justify="center" className={classes.outline}>
+                  <Button component={Link} to="/">Home</Button>
+                  <Button component={Link} to="/about">About</Button>
+                  <Button component={Link} to="/projects">Projects</Button>
+                </Grid>
+            </Toolbar>
+          </div>
         </div>
-      </div>
 
-      <Switch>
-        <Route exact path='/' component={HomePage} />
-        <Route path='/about' component={AboutPage} />
-        <Route path='/projects' component={ProjectsPage} />
-      </Switch>
+        <Switch>
+          <Route exact path='/' component={HomePage} />
+          <Route path='/about' component={AboutPage} />
+          <Route path='/projects' component={ProjectsPage} />
+        </Switch>
 
-    </Router>
+      </Router>
 
-    <Footer/>
+      <Footer/>
 
     </div>
   );
 }
-
-export default App;
