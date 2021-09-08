@@ -122,14 +122,18 @@ export default function HomePage() {
 
             <br></br>
             <br></br>
-            <p className={classes.alignLeft}><small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget nunc in sapien ultrices interdum.
-            Mauris sed lectus sem. Donec ligula libero,tempor vestibulum leo at, accumsan semper risus. Sed condimentum mauris eros, in bibendum purus
-            gravida et. Vestibulum imperdiet sollicitudin odio ac ultricies. Fusce porta quis quam quis sollicitudin.</small></p>
+            <p className={classes.alignLeft}><small>My name is John Doe, Penultimate student from National University of Singapore. I am open to new opportunities to broaden
+            my network and gain relevant skills in the industry. I am currently freelancing, making websites for companies to expand their organizaitonal outreach. As an avid sportsmen,
+            I spend my free time preparing for marathons. I believe that consistency is the key to success.</small></p>
 
             <br></br>
-            <p className={classes.alignLeft}><small>Ut lacinia id lorem at cursus. Morbi efficitur arcu in tortor aliquam, ac porta eros hendrerit.
-            Sed felis enim, gravida et urna vel, suscipit posuere mi. Nulla facilisis risus et sem lacinia, in tincidunt nunc volutpat. Vivamus
-            sit amet mattis elit, in interdum tortor. Quisque nulla enim, aliquet eget bibendum id, tincidunt.</small></p>
+            <p className={classes.alignLeft}><small>I love meeting new people and hearing new perspectives. Feel free to reach out if you want to talk to me about tech,
+            creating software products, or collaboration. </small></p>
+
+            <br></br>
+            <br></br>
+
+            <p className={classes.alignLeft}>CONTACT <small></small></p>
 
           </Grid>
 

@@ -7,16 +7,8 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import Button from '@material-ui/core/Button';
-import Hidden from '@material-ui/core/Hidden';
-import MenuIcon from '@material-ui/icons/Menu';
-import TwitterIcon from '@material-ui/icons/Twitter';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import InstagramIcon from '@material-ui/icons/Instagram';
-import CodeIcon from '@material-ui/icons/Code';
-import BrushIcon from '@material-ui/icons/Brush';
 
 import { Grid, Container, Paper, Slide, Divider} from '@material-ui/core';
-import Carousel from 'react-material-ui-carousel';
 
 import HomePage from './components/HomePage';
 import AboutPage from './components/AboutPage';
