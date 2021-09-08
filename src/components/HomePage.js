@@ -133,7 +133,14 @@ export default function HomePage() {
             <br></br>
             <br></br>
 
-            <p className={classes.alignLeft}>CONTACT <small></small></p>
+            <Button style={{
+                  borderRadius: 35,
+                  backgroundColor: "#FFFAF2",
+                  color: "#000000",
+              }}
+              variant="contained" color="primary">
+              Contact
+            </Button>
 
           </Grid>
 
