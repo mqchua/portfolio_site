@@ -254,11 +254,11 @@ export default function HomePage() {
 
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2">
-              Lizard
+              Project 1
             </Typography>
             <Typography variant="body2" color="textSecondary" component="p">
-              Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-              across all continents except Antarctica
+              Developed a fullstack web application to increase revenue of company. Utilized Selenium to perform web scraping
+              and gather insights on customers.
             </Typography>
           </CardContent>
         </CardActionArea>
@@ -277,11 +277,10 @@ export default function HomePage() {
           />
             <CardContent>
               <Typography gutterBottom variant="h5" component="h2">
-                Lizard
+                Project 2
               </Typography>
               <Typography variant="body2" color="textSecondary" component="p">
-                Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                across all continents except Antarctica
+                Built an internal dashboard to track cashflows of the organization. Improved productivity of department by 50%.
               </Typography>
             </CardContent>
           </CardActionArea>
@@ -300,11 +299,10 @@ export default function HomePage() {
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="h2">
-                Lizard
+                Project 3
               </Typography>
               <Typography variant="body2" color="textSecondary" component="p">
-                Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                across all continents except Antarctica
+                Developed a fully-responsive web-pages for Orbital. Worked primarily in HTML, CSS and Javascript.
               </Typography>
             </CardContent>
           </CardActionArea>
