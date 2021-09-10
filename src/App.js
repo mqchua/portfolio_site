@@ -13,6 +13,7 @@ import { Grid, Container, Paper, Slide, Divider} from '@material-ui/core';
 import HomePage from './components/HomePage';
 import AboutPage from './components/AboutPage';
 import ProjectsPage from './components/ProjectsPage';
+import ContactPage from './components/ContactPage';
 import Footer from './components/Footer';
 
 const useStyles = makeStyles(theme => ({
@@ -49,6 +50,7 @@ export default function App() {
                   <Button component={Link} to="/">Home</Button>
                   <Button component={Link} to="/about">About</Button>
                   <Button component={Link} to="/projects">Projects</Button>
+                  <Button component={Link} to="/contact">Contact</Button>
                 </Grid>
             </Toolbar>
           </div>
@@ -58,6 +60,7 @@ export default function App() {
           <Route exact path='/' component={HomePage} />
           <Route path='/about' component={AboutPage} />
           <Route path='/projects' component={ProjectsPage} />
+          <Route path='/contact' component={ContactPage} />
         </Switch>
 
       </Router>
