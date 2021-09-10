@@ -1,20 +1,17 @@
-import React, { useState } from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import './App.css';
-import { makeStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import IconButton from '@material-ui/core/IconButton';
+import { Grid } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
-
-import { Grid, Container, Paper, Slide, Divider} from '@material-ui/core';
-
-import HomePage from './components/HomePage';
+import { makeStyles } from '@material-ui/core/styles';
+import Toolbar from '@material-ui/core/Toolbar';
+import React from 'react';
+import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
+import './App.css';
 import AboutPage from './components/AboutPage';
-import ProjectsPage from './components/ProjectsPage';
 import ContactPage from './components/ContactPage';
 import Footer from './components/Footer';
+import HomePage from './components/HomePage';
+import ProjectsPage from './components/ProjectsPage';
+
+
 
 const useStyles = makeStyles(theme => ({
   container: {

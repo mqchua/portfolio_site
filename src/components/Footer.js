@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import TwitterIcon from '@material-ui/icons/Twitter';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import InstagramIcon from '@material-ui/icons/Instagram';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import TwitterIcon from '@material-ui/icons/Twitter';
+import React from 'react';
 
 
 const useStyles = makeStyles(theme => ({

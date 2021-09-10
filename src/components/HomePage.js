@@ -1,25 +1,20 @@
-import React, { useState } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import IconButton from '@material-ui/core/IconButton';
+import { Divider, Grid } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
-import Hidden from '@material-ui/core/Hidden';
-
-import CodeIcon from '@material-ui/icons/Code';
-import BrushIcon from '@material-ui/icons/Brush';
-
-import { Grid, Container, Paper, Slide, Divider} from '@material-ui/core';
-import Carousel from 'react-material-ui-carousel';
-
-import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-
-import profilePic from'../images/pp.jpg';
+import Hidden from '@material-ui/core/Hidden';
+import { makeStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
+import BrushIcon from '@material-ui/icons/Brush';
+import CodeIcon from '@material-ui/icons/Code';
+import React from 'react';
 import '../App.css';
+import profilePic from '../images/pp.jpg';
+
+
+
+
 
 const useStyles = makeStyles(theme => ({
   container: {
