@@ -42,14 +42,14 @@ export default function App() {
 
         <div className= {classes.bgColor1}>
           <div className={classes.divCenter}>
-            <Toolbar className={classes.container}>
+            <div className={classes.container}>
                 <Grid container justify="center" className={classes.outline}>
                   <Button component={Link} to="/">Home</Button>
                   <Button component={Link} to="/about">About</Button>
                   <Button component={Link} to="/projects">Projects</Button>
                   <Button component={Link} to="/contact">Contact</Button>
                 </Grid>
-            </Toolbar>
+            </div>
           </div>
         </div>
 
